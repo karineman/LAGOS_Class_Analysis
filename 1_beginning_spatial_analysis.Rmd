@@ -3,6 +3,8 @@ title: "LAGOS Spatial Analysis"
 author: "Matthew Ross"
 date: "9/11/2019"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 
@@ -24,14 +26,19 @@ library(USAboundaries) #USA states and counties
 
 ### First download and then specifically grab the locus (or site lat longs)
 ```{r data-read}
-#Lagos download script
-lagosne_get(version='1.087.1',dest_folder = LAGOSNE:::lagos_path())
+# #Lagos download script
+lagosne_get(dest_folder = LAGOSNE:::lagos_path())
+
 
 #Load in lagos
 lagos <- lagosne_load()
 
 #Grab the lake centroid info
 lake_centers <- lagos$locus
+
+
+load('lake_centers.Rdata')
+
 ```
 
 
@@ -89,7 +96,7 @@ minnesota_lakes %>%
 
 ## 1) Show a map outline of Iowa and Illinois (similar to Minnesota map upstream)
 
-```{r }
+```{r}
 #Your code here
 ```
 

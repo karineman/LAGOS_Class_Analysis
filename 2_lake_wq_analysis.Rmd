@@ -29,7 +29,7 @@ library(lubridate) #For dealing with date and time
 lagosne_get(dest_folder = LAGOSNE:::lagos_path())
 
 #Load in lagos
-lagos <- lagosne_load('1.087.1')
+lagos <- lagosne_load()
 
 
 #Grab the lake centroid info
