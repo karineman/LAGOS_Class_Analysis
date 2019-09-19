@@ -27,7 +27,7 @@ library(USAboundaries) #USA states and counties
 ### First download and then specifically grab the locus (or site lat longs)
 ```{r data-read}
 # #Lagos download script
-lagosne_get(dest_folder = LAGOSNE:::lagos_path())
+LAGOSNE::lagosne_get(dest_folder = LAGOSNE:::lagos_path())
 
 
 #Load in lagos
@@ -97,7 +97,10 @@ minnesota_lakes %>%
 ## 1) Show a map outline of Iowa and Illinois (similar to Minnesota map upstream)
 
 ```{r}
-#Your code here
+ill_iowa <- states %>%
+  filter(name %in% c('Iowa','Illinois'))
+
+
 ```
 
 
