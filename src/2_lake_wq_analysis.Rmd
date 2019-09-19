@@ -52,7 +52,7 @@ nutr <- lagos$epi_nutr
 ```{r}
 clarity_only <- nutr %>%
   select(lagoslakeid,sampledate,chla,doc,secchi) %>%
-  mutate(sampledate = as.character(sampledate) %>% mdy(.))
+  mutate(sampledate = as.character(sampledate) %>% ymd(.))
 
 ```
 

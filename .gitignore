@@ -4,3 +4,4 @@
 .Ruserdata
 *.rds
 *.Rdata
+src/3_assignment3_lake_spatial_analysis.Rmd
