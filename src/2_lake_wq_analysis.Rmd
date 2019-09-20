@@ -144,7 +144,7 @@ ggplot(data=chla_secchi_200, aes(x=chla_secchi_200$chla, y=chla_secchi_200$secch
 
 
 ## Why might this be the case? 
-# This could be caused because as the Chlo A Concentration increases the was is greener and also has more algea growing in it. The greenness and algea decrease the clarity of the water
+# This could be because as the Chlo A Concentration increases the water is greener and also has more algea growing in it. The greenness and algea decreases the clarity of the water
 
 ## 2) What states have the most data? 
 
@@ -177,6 +177,7 @@ count_spatial_state<-wq_spatial_state%>%
                   mutate(state_count = n())%>%
                   arrange(desc(state_count))
 
+# Top 3 States include: Minnesota, Wisconsin, and Michigan
 ```
 
 ##3 Is there a spatial pattern in Secchi disk depth for lakes with at least 200 observations?
