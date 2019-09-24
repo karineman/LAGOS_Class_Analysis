@@ -139,6 +139,7 @@ iowa_lakes <- spatial_lakes[iowa,]%>%
 #Iowa Histogram Lake size vs frequency
 ggplot(data=iowa_lakes, aes(iowa_lakes$lake_area_ha)) +     
     geom_histogram(breaks = seq(0,5000, by = 50))+
+    scale_x_log10()+
     labs(title="Histogram for Iowa") +
     labs(x="Lake Area", y="Count")
 
@@ -152,6 +153,7 @@ ggplot(data=iowa_lakes, aes(iowa_lakes$lake_area_ha)) +
 #Minnesota Histogram Lake size vs frequency
 ggplot(data=minnesota_lakes, aes(minnesota_lakes$lake_area_ha))+      
     geom_histogram(breaks = seq(0,124000, by = 1000))+
+    scale_x_log10()+
     labs(title="Histogram for Minnesota") +
     labs(x="Lake Area", y="Count")
 

@@ -174,9 +174,10 @@ state and arrange that data from most to least total observations per state.
 ```{r}
 count_spatial_state<-wq_spatial_state%>%
                   group_by(state_name)%>%
-                  mutate(state_count = n())%>%
+                  summarize(state_count = n())%>%
                   arrange(desc(state_count))
 
+print(count_spatial_state)
 # Top 3 States include: Minnesota, Wisconsin, and Michigan
 ```
 
